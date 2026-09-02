@@ -35,7 +35,7 @@ public class Show {
         System.out.println("Заменяем актёра " + oldSurname + " на " + newActor + " в \"" + title + '\"');
         for (int i = 0; i < listOfActors.size(); i++) {
             Actor oldActor = listOfActors.get(i);
-            if (oldActor.getSurname().equals(oldSurname)) {
+            if (oldActor.getSurname() != null && oldActor.getSurname().equals(oldSurname)) {
                 listOfActors.set(i, newActor);
                 System.out.println("Актер заменен!");
                 return;
